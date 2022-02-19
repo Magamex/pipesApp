@@ -1,3 +1,9 @@
-<h1>{{ nombre | titlecase }}</h1>
 
-<button (click)="mostrarNombre()">Mostrar</button>
+<div class="text-layout">
+  <h1>{{ nombre | titlecase }}</h1>
+</div>
+
+<button pButton
+        (click)="mostrarNombre()"
+        label="Mostrar Nombre">
+</button>

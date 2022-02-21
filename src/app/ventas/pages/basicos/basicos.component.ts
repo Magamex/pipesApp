@@ -17,4 +17,6 @@ export class BasicosComponent implements OnInit {
   nombreUpper: string = 'DITTO';
   nombreCompleto: string = 'PeRRiTo DiTtO';
 
+  fecha: Date = new Date();
+
 }

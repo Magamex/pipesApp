@@ -4,24 +4,62 @@
   <p>
     Pipes incluidos en angular - Usualmente en el CommonModule
   </p>
-  <div class="grid">
-    <div class="col-4">
-      <p-card header="UpperCase"
-              [subheader]="nombreLower">
-        {{ nombreLower | uppercase }}
-      </p-card>
-    </div>
-    <div class="col-4">
-      <p-card header="LowerCase"
-              [subheader]="nombreUpper">
-        {{ nombreUpper | lowercase }}
-      </p-card>
-    </div>
-    <div class="col-4">
-      <p-card header="TitleCase"
-              [subheader]="nombreCompleto">
-        {{ nombreCompleto | titlecase }}
-      </p-card>
-    </div>
+</div>
+<div class="grid">
+  <div class="col-4">
+    <p-card header="UpperCase"
+            [subheader]="nombreLower">
+      {{ nombreLower | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="LowerCase"
+            [subheader]="nombreUpper">
+      {{ nombreUpper | lowercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="TitleCase"
+            [subheader]="nombreCompleto">
+      {{ nombreCompleto | titlecase }}
+    </p-card>
   </div>
 </div>
+
+<div class="text-layout">
+  <h1>Pipe Fecha</h1>
+  <p>
+    Pipes para mostrar las fechas
+    <br>
+    <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/DatePipe">Enlace</a>
+  </p>
+</div>
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>fecha</li>
+        <li>fecha | date</li>
+        <li>fecha | date:'short'</li>
+        <li>fecha | date : 'dd/MM/yyyy, h:mm a'</li>
+        <li>fecha | date:'long'</li>
+        <li>fecha | date:'MMMM'</li>
+        <li>fecha | date:'MMMM dd,yyyy'</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>{{ fecha }}</li>
+        <li>{{ fecha | date }}</li>
+        <li>{{ fecha | date:'short' }}</li>
+        <li>{{ fecha | date : 'dd/MM/yyyy, h:mm a'}}</li>
+        <li>{{ fecha | date:'long' }}</li>
+        <li>{{ fecha | date:'MMMM' }}</li>
+        <li>{{ fecha | date:'MMMM dd,yyyy' }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
+

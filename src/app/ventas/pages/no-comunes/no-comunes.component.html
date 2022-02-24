@@ -5,13 +5,20 @@
   </p>
 </div>
 
+<a pButton class="p-button-info" target="_blank" href="https://primefaces.org/primeng/showcase/#/fieldset">Enlace</a>
 <div class="grid">
   <div class="col-6 mb-6">
+    <p-fieldset legend="I18nSelectPipe" [toggleable]="true">
+      Saludos {{ nombre }}, Es un placer
+      {{ genero | i18nSelect:invitacionMapa }}
+      a nuestro evento.
+      <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/I18nSelectPipe">Enlace</a>
+    </p-fieldset>
+  </div>
 
-    <a pButton class="p-button-info" target="_blank" href="https://primefaces.org/primeng/showcase/#/fieldset">Enlace</a>
-
-    <p-fieldset legend="Header" [toggleable]="true">
-      Content
+  <div class="col-6 mb-6">
+    <p-fieldset legend="I18nPluralPipe" [toggleable]="true">
+      Actualmente {{ clientes.length | i18nPlural:clientesMapa }}
     </p-fieldset>
   </div>
 </div>

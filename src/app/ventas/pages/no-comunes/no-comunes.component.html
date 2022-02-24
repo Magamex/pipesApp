@@ -5,20 +5,71 @@
   </p>
 </div>
 
-<a pButton class="p-button-info" target="_blank" href="https://primefaces.org/primeng/showcase/#/fieldset">Enlace</a>
+<div>
+  <a pButton class="p-button-info" target="_blank" href="https://primefaces.org/primeng/showcase/#/fieldset">Enlace</a>
+</div>
 <div class="grid">
   <div class="col-6 mb-6">
     <p-fieldset legend="I18nSelectPipe" [toggleable]="true">
-      Saludos {{ nombre }}, Es un placer
-      {{ genero | i18nSelect:invitacionMapa }}
-      a nuestro evento.
       <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/I18nSelectPipe">Enlace</a>
+      <p>
+        Saludos {{ nombre }}, Es un placer
+        {{ genero | i18nSelect:invitacionMapa }}
+        a nuestro evento.
+      </p>
+      <button pButton class="p-button-outlined p-button-danger"
+              label="Cambiar"
+              (click)="cambiarGenero()">
+      </button>
     </p-fieldset>
   </div>
 
   <div class="col-6 mb-6">
     <p-fieldset legend="I18nPluralPipe" [toggleable]="true">
-      Actualmente {{ clientes.length | i18nPlural:clientesMapa }}
+      <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/I18nPluralPipe">Enlace</a>
+      <p>
+        Actualmente {{ clientes.length | i18nPlural:clientesMapa }}
+      </p>
+      <button pButton class="p-button-outlined p-button-help"
+              label="Borrar"
+              (click)="borrarCliente()">
+      </button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-6 mb-6">
+    <p-fieldset legend="SlicePipe" [toggleable]="true">
+      <div>
+        <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/SlicePipe">Enlace</a>
+      </div>
+      <b>Original</b>
+      <pre>{{ clientes }}</pre>
+
+      <b>Slice</b>
+      <pre>{{ clientes | slice:0 }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col-6 mb-6">
+    <p-fieldset legend="Keyvalue Pipe" [toggleable]="true">
+      <div>
+        <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/KeyValuePipe">Enlace</a>
+      </div>
+      <ul>
+        <li *ngFor="let item of persona | keyvalue">
+          <b>{{ item.key }}:</b> {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="col-6 mb-6">
+    <p-fieldset legend="json Pipe" [toggleable]="true">
+      <div>
+        <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/JsonPipe">Enlace</a>
+      </div>
+      <p>No imprime funciones que imprimen objetos</p>
+      <pre> {{ persona | json }} </pre>
     </p-fieldset>
   </div>
 </div>

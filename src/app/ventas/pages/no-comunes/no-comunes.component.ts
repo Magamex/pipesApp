@@ -18,7 +18,7 @@ export class NoComunesComponent implements OnInit {
   }
 
   // I18nPluralPipe
-  clientes: string[] = ['Maria','Pedro','Cata'];
+  clientes: string[] = ['Maria','Pedro','Cata','Mariano'];
 
   clientesMapa = {
     '=0': 'No hay clientes esperando',
@@ -31,6 +31,28 @@ export class NoComunesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambiarGenero(){
+    if(this.genero === 'masculino'){
+      this.genero = 'femenino';
+      this.nombre = 'Susana';
+    }else{
+      this.genero = 'masculino';
+      this.nombre = 'Matias';
+    }
+  }
+
+  borrarCliente(){
+    this.clientes.pop();
+  }
+
+  //keyvalue pipe
+  persona = {
+    nombre:'Matias',
+    apellido:'Gomez',
+    edad:23,
+    lugar:'Buenos Aires, Argentina'
   }
 
 }

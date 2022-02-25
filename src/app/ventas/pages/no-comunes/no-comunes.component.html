@@ -72,4 +72,15 @@
       <pre> {{ persona | json }} </pre>
     </p-fieldset>
   </div>
+
+  <div class="col-6 mb-6">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <div>
+        <a pButton class="p-button-info" target="_blank" href="https://angular.io/api/common/AsyncPipe">Enlace</a>
+      </div>
+      <pre> {{ miObservable | async }} </pre>
+      <pre *ngIf="!(valorPromesa | async)">Esperando...</pre>
+      <pre> {{ valorPromesa | async }} </pre>
+    </p-fieldset>
+  </div>
 </div>

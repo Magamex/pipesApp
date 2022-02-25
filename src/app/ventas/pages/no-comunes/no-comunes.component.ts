@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs/internal/observable/interval';
 
 @Component({
   selector: 'app-no-comunes',
@@ -54,5 +55,13 @@ export class NoComunesComponent implements OnInit {
     edad:23,
     lugar:'Buenos Aires, Argentina'
   }
+
+  // Async Pipe
+  miObservable = interval(1000) //0,1,2,3...
+  valorPromesa = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve('Hola Mundo');
+    },3500)
+  })
 
 }
